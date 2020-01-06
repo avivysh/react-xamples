@@ -2,7 +2,8 @@
 
 /vendor/*
 /config/app.php
-
+/node_modules
+.idea
 /tmp/cache/models/*
 !/tmp/cache/models/empty
 /tmp/cache/persistent/*
@@ -23,3 +24,4 @@
 /app/Config/core.php
 /app/Config/database.php
 /vendors/*
+*.log
