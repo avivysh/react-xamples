@@ -10,6 +10,7 @@ class User extends Component{
     }
 
     render() {
+        console.log('Render User');
         const {user, activeUser} = this.props;
         const active = user === activeUser ? 'active' : '';
         return(

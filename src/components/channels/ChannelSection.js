@@ -23,6 +23,7 @@ class ChannelSection extends Component{
 ChannelSection.propTypes ={
     channels: PropTypes.array.isRequired,
     setChannel: PropTypes.func.isRequired,
+    setMessageChannel: PropTypes.func.isRequired,
     addChannel: PropTypes.func.isRequired
 }
 

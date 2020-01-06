@@ -4,15 +4,17 @@ import PropTypes from 'prop-types';
 class Channel extends Component{
     onClick(e){
         e.preventDefault();
-        const {setChannel, channel} = this.props;
+        const {setChannel, channel,setMessageChannel} = this.props;
         setChannel(channel);
+        setMessageChannel(channel.name)
     }
     render(){
+        console.log('Render Channel');
         const {channel, activeChannel} = this.props;
         const active = channel === activeChannel ? 'active' : '';
         return (
-            <li className={active}>
-                <a onClick={this.onClick.bind(this)}>
+            <li className={active} onClick={this.onClick.bind(this)}>
+                <a >
                     {channel.name}
                 </a>
             </li>
@@ -22,7 +24,8 @@ class Channel extends Component{
 
 Channel.propTypes ={
     channel: PropTypes.object.isRequired,
-    setChannel: PropTypes.func.isRequired
+    setChannel: PropTypes.func.isRequired,
+    setMessageChannel: PropTypes.func.isRequired
 }
 
 export default Channel
